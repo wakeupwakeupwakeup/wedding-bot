@@ -1,0 +1,15 @@
+[build]
+  command = "# команда сборки вашего проекта"
+  publish = "public"  # директория, которая будет опубликована
+
+[functions]
+  directory = "functions"  # директория, где хранятся ваши функции
+  
+[dev]
+  functions = "functions"  # директория функций для локальной разработки 
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true 
